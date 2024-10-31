@@ -1,7 +1,48 @@
+/* Glovbal CSS */
 body {
-    font-family: "Comfortaa", sans-serif;
+    font-family: cursive !important;
     background-color: #272b30;
+    height: 2000px;
 }
-header img{
-    height: 1%;
+
+/* Header CSS */
+header img {
+    height: 30vh;
+}
+
+/* navBar CSS */
+nav {
+    background-color: rgb(58, 73, 123) !important;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
+    z-index: 99;
+    top: 0;
+    margin-top: -30px;
+}
+
+nav img {
+    width: 40px;
+}
+
+nav .navbar-brand,
+nav .navbar-brand:hover {
+    color: white;
+    font-size: 20px;
+    line-height: 24px;
+    margin-inline: 5px;
+}
+
+.nav-link {
+    color: white;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.nav-link:hover {
+    color: rgb(0, 153, 204);
+    transition: color 0.7s;
+}
+
+.navbar-nav .nav-link.active {
+    color: rgb(0, 153, 204);
 }
