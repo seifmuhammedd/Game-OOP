@@ -63,10 +63,25 @@ nav .navbar-brand:hover {
 }
 .card-head span{
     background-image: linear-gradient(#4A6792 0 100%);
+    transition: all 0.2s ease;
 }
 .card:hover .card-head span{
     background-image: linear-gradient(rgba(0,0,0,0) 0 100%);
 }
 .card-footer span{
     background-color: #363739;
+}
+
+/* Game Details CSS */
+.game-details{
+    position: fixed;
+    inset: 0;
+    background-color: #27282B;
+    z-index: 100;
+}
+.game-details p span{
+    background-color: rgb(0, 153, 204);
+}
+.game-details p.description{
+    font-size: 14px;
 }
