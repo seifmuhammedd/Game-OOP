@@ -50,6 +50,7 @@ nav .navbar-brand:hover {
 /* Main Content CSS */
 .card{
     transition: transform 0.7s ease;
+    cursor: pointer;
 }
 .card:hover{
     transform: scale(1.05);
