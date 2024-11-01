@@ -46,3 +46,27 @@ nav .navbar-brand:hover {
 .navbar-nav .nav-link.active {
     color: rgb(0, 153, 204);
 }
+
+/* Main Content CSS */
+.card{
+    transition: transform 0.7s ease;
+}
+.card:hover{
+    transform: scale(1.05);
+}
+.card-img{
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+.card:hover .card-img{
+    opacity: 1;
+}
+.card-head span{
+    background-image: linear-gradient(#4A6792 0 100%);
+}
+.card:hover .card-head span{
+    background-image: linear-gradient(rgba(0,0,0,0) 0 100%);
+}
+.card-footer span{
+    background-color: #363739;
+}
