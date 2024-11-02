@@ -1,21 +1,28 @@
-const gameDetails = document.getElementById("gameDetils");
+import { Ui } from "./ui.js";
+import { Games } from "./game.js";
+import { Details } from "./details.js";
 const closeBtn = document.getElementById("btnClose");
-const cards = document.querySelectorAll(".card");
 const categories = document.querySelectorAll(".navbar-nav .nav-item a");
-
-for (const card of cards) {
-  card.addEventListener("click", () => {
-    gameDetails.classList.replace("d-none", "d-block");
-  });
+export let gamesList;
+let ui = new Ui();
+let games = new Games();
+async function showGames(category = "mmorpg"){
+    ui.showLoading()
+    gamesList = await games.getGames(category);
+    ui.hideLoading()
+    ui.display()
+    games.showDetailsOfGame()
 }
-
+showGames()
 closeBtn.addEventListener("click", () => {
-  gameDetails.classList.replace("d-block", "d-none");
+  ui.closeDetails();
 });
 
 for (const category of categories) {
-    category.addEventListener("click", function(){
-        let categoryName = this.innerHTML.toLowerCase()
-        
-    })
+  category.addEventListener("click", async function () {
+    ui.changeActive();
+    let categoryName = this.innerHTML.toLowerCase();
+    ui.showLoading();
+    showGames(categoryName)
+  });
 }
